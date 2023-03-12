@@ -30,6 +30,7 @@ app.use((req,res,next)=>{
     next()
 })
 
+app.use(express.static('uploads'))
 
 //==========================================================SET TEMPLETE ENGINES==========================================================
 app.set('view engine','ejs')
@@ -37,7 +38,7 @@ app.set('view engine','ejs')
 
 
 //================================================================ROUTES================================================================
-app.use('',require('./routes/userR.js'))
+app.use('/',require('./routes/userR.js'))
 
 
 
